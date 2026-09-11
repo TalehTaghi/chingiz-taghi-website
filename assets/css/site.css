@@ -144,8 +144,8 @@ main { flex: 1; }
   .wrap { padding-left: 16px !important; padding-right: 16px !important; }
   .hero { padding-top: 34px !important; padding-bottom: 34px !important; gap: 30px !important; }
   .section { padding-top: 44px !important; padding-bottom: 44px !important; }
-  .stats-grid { gap: 26px 18px !important; justify-content: flex-start !important; }
-  .stats-grid > div { flex: 0 1 45% !important; text-align: left !important; }
+  .stats-grid { flex-wrap: nowrap !important; gap: 10px !important; }
+  .stats-grid .stat-value { font-size: 30px !important; }
   .grid-books { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 26px 14px !important; }
   .hero-portrait, .split-media { flex: 1 1 100% !important; width: 100% !important; max-width: none !important; min-width: 0 !important; }
   .hero-col, .split-col { flex: 1 1 100% !important; min-width: 0 !important; }
