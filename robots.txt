@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://talehtaghi.github.io/chingiz-taghi-website/sitemap.xml
+Sitemap: https://chingiztaghi.netlify.app/sitemap.xml
