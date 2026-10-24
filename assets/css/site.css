@@ -131,6 +131,19 @@ main { flex: 1; }
 .note-mono { font-family: ui-monospace, monospace; font-size: 12px; color: var(--color-neutral-600); margin: calc(var(--space-8) * 1.5) 0 0; max-width: 40em; }
 .buy-block { margin-top: calc(var(--space-8) * 3); padding-top: calc(var(--space-8) * 1.5); border-top: 1px solid var(--color-divider); }
 .outlet-card { gap: var(--space-3); box-shadow: var(--shadow-sm); }
+.libraff-card { max-width: 860px; margin-bottom: var(--space-6); padding: var(--space-6); gap: var(--space-6); box-shadow: var(--shadow-sm); }
+.libraff-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: var(--space-4); }
+.libraff-name { display: block; margin-top: 4px; font-family: var(--font-heading); font-size: 22px; color: var(--color-text); }
+.libraff-name:hover { color: var(--color-accent-400); }
+.libraff-link { font-size: 13px; }
+.libraff-group h3 { margin: 0 0 var(--space-2); font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--color-neutral-500); }
+.libraff-group ul { list-style: none; margin: 0; padding: 0; }
+.libraff-group li { display: grid; grid-template-columns: 9.5em 1fr auto; align-items: baseline; gap: var(--space-4); padding: var(--space-3) 0; border-top: 1px solid var(--color-divider); }
+.b-name { font-family: var(--font-heading); font-size: 15px; color: var(--color-text); }
+.b-addr { font-size: 13px; line-height: 1.5; color: var(--color-neutral-400); }
+.b-phones { font-size: 13px; white-space: nowrap; text-align: right; }
+.b-phones a { color: var(--color-neutral-300); }
+.b-phones a:hover { color: var(--color-accent-400); }
 .outlet-card .addr { font-size: 13px; color: var(--color-neutral-400); line-height: 1.5; }
 
 /* footer */
@@ -170,4 +183,7 @@ main { flex: 1; }
   h1.page-title, .hero h1 { font-size: 34px !important; line-height: 1.05 !important; }
   .section-head h2, h2.section-title { font-size: 23px !important; }
   .lede, .page-intro { font-size: 16px !important; }
+  .libraff-card { padding: var(--space-4) !important; }
+  .libraff-group li { grid-template-columns: 1fr !important; gap: 2px !important; }
+  .b-phones { text-align: left !important; white-space: normal !important; }
 }
