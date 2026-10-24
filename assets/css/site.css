@@ -137,6 +137,22 @@ main { flex: 1; }
 .site-footer { border-top: 1px solid var(--color-divider); margin-top: calc(var(--space-8) * 2); }
 .site-footer .wrap { padding-top: calc(var(--space-8) * 1.5); padding-bottom: calc(var(--space-8) * 1.5); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); font-size: 12px; color: var(--color-neutral-600); }
 
+/* cover carousel — books published under more than one title */
+.cc-frame { position: relative; }
+.cc-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); transition: box-shadow .2s ease; cursor: grab; outline-offset: 3px; }
+.cc-track::-webkit-scrollbar { display: none; }
+.cc-track.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+.cc-slide { flex: 0 0 100%; margin: 0; scroll-snap-align: start; }
+.cc-track .book-cover { box-shadow: none; border-radius: 0; }
+.cc-track img { -webkit-user-drag: none; user-select: none; }
+.book-card:hover .cc-track, .split-media .cc-track { box-shadow: var(--shadow-md); }
+.cc-dots { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); display: flex; gap: 2px; padding: 2px 4px; border-radius: 999px; background: rgba(10, 12, 22, .55); backdrop-filter: blur(4px); }
+.cc-dots button { width: 18px; height: 18px; padding: 0; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.cc-dots button::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: rgba(255, 255, 255, .45); transition: background-color .15s ease, transform .15s ease; }
+.cc-dots button[aria-current="true"]::after { background: #fff; transform: scale(1.15); }
+.cc-caption { margin: var(--space-3) 0 0; font-size: 12px; line-height: 1.6; color: var(--color-neutral-500); text-align: center; }
+.book-also { font-size: 12px; color: var(--color-neutral-500); font-style: italic; }
+
 @media (max-width: 700px) {
   .site-header .wrap { padding: 12px 16px !important; row-gap: 10px !important; column-gap: 10px !important; }
   .site-nav { order: 3; width: 100%; gap: 16px !important; }
